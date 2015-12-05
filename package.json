@@ -17,5 +17,8 @@
     "coffee-script": "~1.9.3",
     "connman-simplified-resin": "^0.1.5",
     "express": "^4.13.0"
+  },
+  "devDependencies": {
+    "node-sass": "^3.4.2"
   }
 }

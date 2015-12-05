@@ -1,0 +1,65 @@
+$black: #2B2B2B;
+$nvblue: #1D4489;
+$white: #fafbfc;
+$cloudblue: #cad3e3;
+$nvgray: #9498A0;
+$platinum: #DFE4EE;
+$dynamicblue: #4D89F1;
+
+body{
+    background-color: $cloudblue;
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Open Sans', 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, label{
+    color: $black;
+    line-height: 1.35;
+}
+
+@media screen and (max-width: 768px) {
+    h1{
+        font-size: 28px;
+    }
+    h4{
+        font-size: 16px;
+    }
+}
+
+#logo{
+    height: 50px;
+    margin-top: 10px;
+}
+
+.navbar{
+    background-color: $white;
+    height: 70px;
+}
+
+.body-container{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 70px 0 25vh;
+    .row{
+        margin: auto;
+        @media screen and (min-width: 500px) {
+            min-width: 500px;
+            max-width: 1000px;
+        }
+    }
+}
+
+#connect-button{
+    background-color: $nvblue;
+    color: $white;
+    &:hover{
+        background-color: $dynamicblue;
+    }
+}
+
+.no-margin{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
