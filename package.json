@@ -19,6 +19,8 @@
     "express": "^4.13.0"
   },
   "devDependencies": {
-    "node-sass": "^3.4.2"
+    "autoprefixer": "^6.1.2",
+    "node-sass": "^3.4.2",
+    "postcss-cli": "^2.3.2"
   }
 }

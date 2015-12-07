@@ -21,8 +21,14 @@ h1, h2, h3, h4, h5, h6, p, label {
   height: 70px; }
 
 .body-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   height: 100%;
   width: 100%;
