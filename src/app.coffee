@@ -10,6 +10,7 @@ os = require('os')
 async = require('async')
 fs = Promise.promisifyAll(require('fs'))
 
+connectionTest = require('./connectionTest')
 config = require('./wifi.json')
 ssid = process.env.PORTAL_SSID or config.ssid
 passphrase = process.env.PORTAL_PASSPHRASE or config.passphrase
@@ -48,9 +49,9 @@ getIptablesRules = (callback) ->
 				rule: "TETHER -p udp --dport 53 -j DNAT --to-destination #{myIP}:53"
 		]
 
-
 startServer = (wifi) ->
 	console.log('Getting networks list')
+	connectionTest -> process.exit()
 	wifi.getNetworksAsync()
 	.catch (err) ->
 		throw err unless err.message == 'No WiFi networks found'
